@@ -4,6 +4,7 @@
 from pec.content import _
 from zope import schema
 from zope.interface import Interface
+from plone.namedfile.field import NamedBlobImage
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 
@@ -28,6 +29,13 @@ class ICover(Interface):
         required=False,
     )
 
+    hvStartSecond = schema.Int(
+        title=_(u"Hero Video Start Second"),
+        default=0,
+        required=True,
+    )
+
+
 
 class IMember(Interface):
 
@@ -39,4 +47,10 @@ class IMember(Interface):
     jobTitle = schema.TextLine(
         title=_(u"Job Title"),
         required=True,
+    )
+
+
+    image = NamedBlobImage(
+        title=_(u"Profile Image"),
+        required=False,
     )
