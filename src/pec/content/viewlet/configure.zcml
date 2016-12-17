@@ -7,7 +7,7 @@
     <!-- Viewlets -->
     <browser:viewlet
       name="hero_video"
-      for="pec.content.interfaces.ICover"
+      for="*"
       manager="plone.app.layout.viewlets.interfaces.IAboveContent"
       template="template/hero_video.pt"
       class=".viewlet.HeroVideo"

@@ -12,6 +12,49 @@ class IPecContentLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
 
 
+class IPhFit(Interface):
+    """ Physical Fitness """
+    title = schema.TextLine(
+        title=_(u"Name"),
+        required=True,
+    )
+
+    height = schema.Float(
+        title=_(u"Height, cm"),
+        required=True,
+    )
+
+    weight = schema.Float(
+        title=_(u"Weight, kg"),
+        required=True,
+    )
+
+    running800 = schema.Timedelta(
+        title=_(u"Timedelta"),
+        required=True,
+    )
+
+    forwardBend = schema.Float(
+        title=_(u"Forward bend"),
+        required=True,
+    )
+
+    sitUps = schema.Int(
+        title=_(u"Sit-Ups with 60 seconds"),
+        required=True,
+    )
+
+    longJump = schema.Float(
+        title=_(u"Standing Long Jump"),
+        required=True,
+    )
+
+    bmi = schema.Float(
+        title=_(u"Body mass index(BMI)"),
+        required=True,
+    )
+
+
 class ICover(Interface):
 
     title = schema.TextLine(

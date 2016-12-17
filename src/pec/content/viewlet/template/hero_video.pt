@@ -4,8 +4,9 @@ request = econtext.get('request')
 isEdit = request.get('ACTUAL_URL').endswith('edit')
 ?>
 
-    <div tal:condition="not:isEdit"
-         id="herovideo" class="index_static default_width" style="background-attachment:fixed; background-size:cover; background-position:bottom bottom;background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(extra-images/banner-08.jpg); ">
+    <div tal:condition="python:not isEdit and context.portal_type == 'Cover'"
+         id="hero_banner" class="index_static default_width" style="background-attachment:fixed; background-size:cover; background-position:bottom bottom;background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(extra-images/banner-08.jpg); ">
+
          <div class="swiper-container">
             <!-- START SLIDER -->
             <div class="swiper-wrapper" >
@@ -24,3 +25,20 @@ tal:attributes="data-property string:{videoURL:'${context/heroVideo}',containmen
          </div>
       </div>
     <!--Banner Wrap End-->
+
+
+
+
+
+    <div class="gt_sub_banner_bg default_width" id="hero_banner"  tal:condition="python:not isEdit and context.portal_type != 'Cover'">
+        <div class="container">
+            <div class="gt_sub_banner_hdg  default_width">
+                <h3 tal:content="context/title">Shop Detail</h3>
+<!--                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop Detail</a></li>
+                </ul> -->
+            </div>
+        </div>
+
+    </div>

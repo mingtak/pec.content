@@ -17,4 +17,35 @@
       directory="static"
       />
 
+  <!-- Browser View -->
+  <browser:page
+      name="import_phfit"
+      for="*"
+      class=".import_phfit.ImportPhFit"
+      permission="cmf.ManagePortal"
+      />
+
+  <browser:page
+      name="phfit_view"
+      for="pec.content.interfaces.IPhFit"
+      class=".views.PhFitView"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="member_view"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      class=".views.MemberView"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="cover_view"
+      for="pec.content.interfaces.ICover"
+      class=".views.CoverView"
+      permission="zope2.View"
+      />
+
+
+
 </configure>
