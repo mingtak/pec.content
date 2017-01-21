@@ -5,3 +5,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 class HeroVideo(base.ViewletBase):
     """  """
+
+class ScriptToFooter(base.ViewletBase):
+    """  """
+

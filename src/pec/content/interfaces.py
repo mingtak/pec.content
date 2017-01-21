@@ -19,6 +19,22 @@ class IPhFit(Interface):
         required=True,
     )
 
+    # 開課班級(非學生班級)
+    whichClass = schema.TextLine(
+        title=_(u"Which Class"),
+        required=True,
+    )
+
+    age = schema.Int(
+        title=_(u"Age"),
+        required=True,
+    )
+
+    gender = schema.Bool(
+        title=_(u"Gender, checked for male"),
+        required=True,
+    )
+
     height = schema.Float(
         title=_(u"Height, cm"),
         required=True,
@@ -30,7 +46,7 @@ class IPhFit(Interface):
     )
 
     running800 = schema.Timedelta(
-        title=_(u"Timedelta"),
+        title=_(u"Running, 800m"),
         required=True,
     )
 
@@ -67,7 +83,7 @@ class ICover(Interface):
         required=False,
     )
 
-    heroVideo = schema.URI(
+    heroVideo = schema.Text(
         title=_(u"Hero Video"),
         required=False,
     )
@@ -92,6 +108,15 @@ class IMember(Interface):
         required=True,
     )
 
+    tel = schema.TextLine(
+        title=_(u"Tel Number"),
+        required=False,
+    )
+
+    email = schema.TextLine( 
+        title=_(u"Email"),
+        required=False,
+    )
 
     image = NamedBlobImage(
         title=_(u"Profile Image"),
