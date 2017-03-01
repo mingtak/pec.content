@@ -30,10 +30,21 @@ class IPhFit(Interface):
         required=True,
     )
 
+    grade = schema.Int(
+        title=_(u"Grade"),
+        required=True,
+    )
+
     gender = schema.Bool(
         title=_(u"Gender, checked for male"),
         required=True,
     )
+
+    personalId = schema.TextLine(
+        title=_(u"Personal Id"),
+        required=True,
+    )
+
 
     height = schema.Float(
         title=_(u"Height, cm"),
@@ -88,12 +99,13 @@ class ICover(Interface):
         required=False,
     )
 
+    """ disabled
     hvStartSecond = schema.Int(
         title=_(u"Hero Video Start Second"),
         default=0,
         required=True,
     )
-
+    """
 
 
 class IMember(Interface):

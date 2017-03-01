@@ -55,6 +55,7 @@
     <element value="summary_view"/>
     <element value="tabular_view"/>
     <element value="member_view"/>
+    <element value="phfit_overview"/>
   </property>
 
   <!-- Method aliases -->

@@ -40,6 +40,13 @@
       />
 
   <browser:page
+      name="phfit_overview"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      class=".views.PHFitOverView"
+      permission="zope2.View"
+  />
+
+  <browser:page
       name="cover_view"
       for="pec.content.interfaces.ICover"
       class=".views.CoverView"
